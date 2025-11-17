@@ -1,0 +1,49 @@
+:not(:defined)::after{
+	content:"Loading ...";
+	direction:ltr;
+	display:flex;
+	place-content:center;
+	align-items:center;
+	height:100%;
+	background:linear-gradient(to right,#0001 10%,#0002 50%,#0001 80%);
+	background-size:50% 100%;
+	animation:placeholder 1s linear 0s infinite normal forwards;
+}
+@keyframes placeholder{
+	from{background-position:-100% 0}
+	to{background-position:100% 0}
+}
+noscript,
+.notsupported{
+	position:fixed;
+	display:none;
+	z-index:100000;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#3490dc;
+	color:#fff;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:5%;
+	font-family:system-ui,Tahoma;
+	direction:ltr;
+	/*IE:5,6,7 hack*/
+	*display:block;
+	_display:block;
+}
+.notsupported a{
+	color:#fff !important;
+	text-decoration:underline;
+}
+.notsupported p{text-align:center}
+html[lang=fa] .notsupported > p[dir=ltr]{display:none}
+noscript{
+	z-index:99999;
+	display:block;
+}
+/*IE:8,9,10,11 hack*/
+@media all\0{.notsupported{display:table-cell}}
+/*Chrome:76,Firefox:69,Edge:79,Safari:13.1 hack*/
+@supports not ((white-space:break-spaces) or (:autofill)){.notsupported{display:table-cell}}
