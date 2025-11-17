@@ -1,4 +1,4 @@
-# Pure & standard Web Components autoLoader
+# Autoloader for standard web components; Pure
 
 With a simple combination and creative approach, you can easily load all your standard components through an unzipped JavaScript that is only 64 bytes.
 
