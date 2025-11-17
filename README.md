@@ -24,6 +24,7 @@ That's all!
 
 The good news is that module-type JavaScripts do not need to be mentioned at the end of the body tag and [are executed after the content is loaded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules):
 They can be written in the same head and there is no need to write additional code to check for the end of the page load.
+Another thing about loading modules is that modules are not loaded twice in JavaScript; so repeating the import does not cause a problem.
 
 # app.js
 
@@ -31,7 +32,7 @@ They can be written in the same head and there is no need to write additional co
 document.body.querySelectorAll(':not(:defined)').forEach(el => import(`./${el.localName}.js`))
 ```
 
-# This can also be done for placeholder web components that have not yet been loaded:
+This can also be done for placeholder web components that have not yet been loaded:
 
 ```css
 :not(:defined)::after{
@@ -51,7 +52,7 @@ document.body.querySelectorAll(':not(:defined)').forEach(el => import(`./${el.lo
 }
 ```
 
-# We also show a message for potentially extinct browsers to update, which of course are not even one percent:
+We also show a message for potentially extinct browsers to update, which of course are not even one percent:
 
 ```css
 .notsupported{
