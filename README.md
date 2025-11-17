@@ -84,3 +84,11 @@ or:
 ```html
 <link rel="stylesheet" href="./css/app.css" fetchpriority="high"/>
 ```
+
+# Using components with lazy load
+
+```html
+<script src="./js/app-lazy.js" type="module" fetchpriority="high"></script>
+```
+
+A component will not load unless it is placed in the page view.
