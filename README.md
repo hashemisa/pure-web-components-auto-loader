@@ -22,8 +22,10 @@ That's all!
 
 [Module type JavaScripts](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script) are also supported in versions 60 and 61 of Firefox and Chrome browsers, etc.
 
-The good news is that module-type JavaScripts do not need to be mentioned at the end of the body tag and [are executed after the content is loaded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules):
+The good news is that module-type JavaScripts do not need to be mentioned at the end of the body tag and [are executed after the content is loaded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules);
+
 They can be written in the same head and there is no need to write additional code to check for the end of the page load.
+
 Another thing about loading modules is that modules are not loaded twice in JavaScript; so repeating the import does not cause a problem.
 
 # app.js
