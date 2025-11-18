@@ -1,4 +1,6 @@
-# Auto loader for standard Web components; Pure & Vanilla JS
+# Auto loader for standard Web components; 
+
+## Minimal, Modern, Pure & Vanilla JS;
 
 With a simple combination and creative approach, you can easily load all your standard components through an unzipped JavaScript that is only 64 bytes.
 
