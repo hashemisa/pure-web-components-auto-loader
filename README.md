@@ -1,4 +1,4 @@
-# Autoloader for standard web components; Pure
+# Auto loader for standard Web components; Pure & Vanilla JS
 
 With a simple combination and creative approach, you can easily load all your standard components through an unzipped JavaScript that is only 64 bytes.
 
@@ -8,7 +8,7 @@ The interesting thing is that the latest version of browser support for Windows 
 
 Another point is that currently, the percentage of desktop devices is much lower than mobile; therefore, it is possible to enter the modern world of component writing with less code volume and real isolated components.
 
-# Using components
+# Using:
 
 Put a script tag similar to this
 
@@ -16,19 +16,19 @@ Put a script tag similar to this
 <script src="./js/app.js" type="module" fetchpriority="high"></script>
 ```
 
-in the head of your index.html or App's root.
+in the head of your index.html;
 
 That's all!
 
 [Module type JavaScripts](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script) are also supported in versions 60 and 61 of Firefox and Chrome browsers, etc.
 
-The good news is that module-type JavaScripts do not need to be mentioned at the end of the body tag and [are executed after the content is loaded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules);
+The good news is that module type JavaScripts do not need to be mentioned at the end of the body tag and [are executed after the content is loaded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules);
 
 They can be written in the same head and there is no need to write additional code to check for the end of the page load.
 
 Another thing about loading modules is that modules are not loaded twice in JavaScript; so repeating the import does not cause a problem.
 
-# app.js
+# app.js:
 
 ```js
 document.body.querySelectorAll(':not(:defined)').forEach(el => import(`./${el.localName}.js`))
@@ -88,10 +88,16 @@ or:
 <link rel="stylesheet" href="./css/app.css" fetchpriority="high"/>
 ```
 
-# Using components with lazy load
+# Using components with lazy auto loader
 
 ```html
 <script src="./js/app-lazy.js" type="module" fetchpriority="high"></script>
 ```
 
 A component will not load unless it is placed in the page view.
+
+# Using components with lazy auto loader + preload + CLS Tricks
+
+```html
+<script src="./js/app-lazy-preload.js" type="module" fetchpriority="high"></script>
+```

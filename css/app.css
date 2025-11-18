@@ -47,3 +47,51 @@ noscript{
 @media all\0{.notsupported{display:table-cell}}
 /*Chrome:76,Firefox:69,Edge:79,Safari:13.1 hack*/
 @supports not ((white-space:break-spaces) or (:autofill)){.notsupported{display:table-cell}}
+/*Optional*/
+html,body{
+	margin:0;
+	padding:0;
+	width:100%;
+}
+html,html:fullscreen{height:100%}
+html{
+	scrollbar-color:#555 transparent;
+	scrollbar-width:thin;
+}
+body{
+	min-height:100vh;
+	height:auto;
+	overflow:hidden auto;
+	/*overscroll-behavior-y:contain;*/
+	scroll-margin:0;
+	scroll-padding:0;
+	scroll-snap-type:y mandatory;
+	scroll-behavior:smooth;
+	scroll-snap-align:center;
+	background-color:#fff;
+	font:normal 13px/1.5 Samim,system-ui;
+	color:#555;
+	font-smoothing:antialiased;
+	/*contain-intrinsic-size:1000px;*/
+}
+body > div#_loaded{
+	position:fixed;
+	visibility:visible;
+	z-index:99999;
+	display:block;
+	background-color:#fff;
+	left:0;
+	top:0;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100vh;
+	opacity:1;
+	transition:opacity .2s,height .3s,visibility .4s;
+}
+body.loaded > div#_loaded{
+	opacity:0;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
